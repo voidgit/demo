@@ -27,14 +27,14 @@ jobs:
         if: always() # Always run this step even if tests fail
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
-          path: build/test-results/test/ # Path to JUnit XML files
+          name: surefire-reports
+          path: surefire-reports/ # Path to JUnit XML files
 
       - name: Publish Test Results (GitHub Actions annotations)
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
           files: |
-            build/test-results/**/*.xml
-            build/test-results/**/*.trx
-            build/test-results/**/*.json
+            surefire-reports/**/*.xml
+            surefire-reports/**/*.trx
+            surefire-reports/**/*.json
