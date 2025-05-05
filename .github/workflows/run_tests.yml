@@ -41,3 +41,4 @@ jobs:
             target/surefire-reports/**/*.xml
             target/surefire-reports/**/*.trx
             target/surefire-reports/**/*.json
+
