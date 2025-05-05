@@ -8,6 +8,7 @@ on:
 
 permissions:
   checks: write  # 👈 REQUIRED by publish-unit-test-result-action
+  pull-requests: write
 
 jobs:
   test:
@@ -41,3 +42,4 @@ jobs:
             target/surefire-reports/**/*.xml
             target/surefire-reports/**/*.trx
             target/surefire-reports/**/*.json
+
