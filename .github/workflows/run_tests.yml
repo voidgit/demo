@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  checks: write  # 👈 REQUIRED by publish-unit-test-result-action
+
 jobs:
   test:
     runs-on: ubuntu-latest
