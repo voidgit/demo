@@ -28,13 +28,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
-          path: surefire-reports/ # Path to JUnit XML files
+          path: target/surefire-reports/ # Path to JUnit XML files
 
       - name: Publish Test Results (GitHub Actions annotations)
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
           files: |
-            surefire-reports/**/*.xml
-            surefire-reports/**/*.trx
-            surefire-reports/**/*.json
+            target/surefire-reports/**/*.xml
+            target/surefire-reports/**/*.trx
+            target/surefire-reports/**/*.json
